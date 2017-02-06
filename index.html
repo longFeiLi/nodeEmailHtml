@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+  p{
+    margin: 0px;
+  }
+  table {
+    border: 0;
+    cellspacing: 0;
+    cellpadding: 0;
+  }
+  body{
+    font-family: OpenSans, Helvetica, Arial, sans-serif;
+    width:800px;
+  }
+  .f-sb{
+    font-family:OpenSans-Bold, Helvetica, Arial, sans-serif;
+  }
+  </style>
+</head>
+<body >
+  <table style="width:800px;" cellspacing="0" cellpadding="0">
+    <tr style="height:190px;background-image: url('http://statics3.seeedstudio.com/assets/img/bazaar/coupon_center/top.png');background-repeat: no-repeat;">
+        <td>
+          <p  class="f-sb" style="text-align: center;color: #FFFFFF;font-size: 32px;"> Enjoy Your Discount Before It’s Too Late </p>
+        </td>
+    </tr>
+    <!-- email_bg.png  -->
+   <tr style="background: url('http://statics3.seeedstudio.com/assets/img/bazaar/coupon_center/email_bg.png'); background-repeat: no-repeat;">
+     <td style="height: 910px;">
+       <table style="padding: 40px 50px 0px 50px;">
+         <tr>
+           <td >
+             <p style="margin: 0px;font-family:OpenSans-Bold, Helvetica, Arial, sans-serif;
+      font-size: 20px;
+      color: #3C3C3C;">Hi <?= $nick ?>,</p>
+           </td>
+         </tr>
+         <tr>
+           <td>
+             <p style="margin:0px;font-size: 16px;margin-top:10px;margin-bottom:30px;width: 700px;
+       line-height: 24px;
+   color: #3C3C3C;">Your coupon is going to expire soon. Pick up your discount by <?= date('Y-m-d H:i', $coupon_end_date)?>
+   &nbsp;&nbsp;You deserve it!</p>
+           </td>
+         </tr>
+         <tr >
+           <td>
+             <table style="height:391px;background: url('http://statics3.seeedstudio.com/assets/img/bazaar/coupon_center/email_1.png')" cellspacing="0" cellpadding="0">
+                <tr style="">
+                  <td>
+                    <p class="f-sb" style="font-size: 20px;text-align: center;margin-top: 40px;
+            padding-left: 140px;color: #00946C;">OFF</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p class="f-sb"  style="
+                    font-size: 66px;
+                    color: #00946C;
+                    text-shadow: 0px 2px 2px rgba(0,0,0,0.20);
+                    text-align: center;
+                    margin: 0 auto;
+                    margin-top: -60px;
+                    margin-left: -9px;
+                    width: 700px;"><?= $amount ?>33.33</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                      <p class="f-sb" style="margin: 0px;
+    text-align: center;font-size: 18px;color: #000000;margin-top: 47px;
+    margin-left: -10px;"><?= $coupon_name ?>Seeed</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p class="f-sb" style="margin: 0px;text-align: center;
+          font-size: 12px;color: #9C9C9C;margin-top: -33px;
+          line-height: 20px;">Expiry Date: <?= date('Y/m/d', $coupon_start_date)?> - <?= date('Y/m/d', $coupon_expire_date)?> </p>
+                  </td>
+                </tr>
+             </table>
+           </td>
+         </tr>
+         <tr>
+           <td style="text-align: center;">
+             <a href="https://www.seeedstudio.com/" target="_blank" style="text-decoration: none;"><button style="background: #00946C;
+             border: 1px solid #007A63;
+             box-shadow: inset 0px 2px 0px 0px #33A98A;font-family: OpenSans-Bold, Helvetica, Arial, sans-serif;
+             font-size: 16px;width: 250px;
+             height: 50px;    margin: 0 auto;
+             color: #ffffff!important; cursor: pointer;
+             text-shadow: 0px 1px 1px rgba(0,0,0,0.10);
+             border-radius: 2px;">Go shipping now</button></a>
+           </td>
+         </tr>
+         <tr>
+           <td>
+             <p class="f-sb" style="font-size: 16px;
+     color: #3C3C3C;margin: 10px 0px;">Please note: </p>
+           </td>
+         </tr>
+         <tr>
+           <td>
+             <p style="font-size: 16px;color: #3C3C3C;margin:0px;line-height: 22px;">
+               The coupon is available in <?= date('Y/m/d H:i:s', $coupon_start_date)?> — <?= date('Y/m/d H:i:s', $coupon_end_date)?>. Please don’t forget to use it in time.
+             </p>
+           </td>
+         </tr>
+         <tr>
+           <td>
+             <p style="font-size: 16px;
+      color: #3C3C3C;margin:0px; ">
+       If you would like to view your coupon, please visit <a style=" text-decoration: none;
+          color: #007ac9;" href="https://www.seeedstudio.com/my_coupon.html" target="_blank" >Your Account on Seeedstudio.com.</a>
+             </p>
+           </td>
+         </tr>
+         <tr>
+           <td>
+             <p style="font-size: 16px;color: #3C3C3C;margin: 10px 0px;">Enjoy shopping on Seeed!</p>
+           </td>
+         </tr>
+         <tr>
+           <td>
+             <p style="font-size: 16px;line-height: 22px;
+      color: #3C3C3C;margin: 10px 0px;">Please note: This e-mail was sent from a notification-only address that cannot accept incoming e-mail. Please do not reply to this message.</p>
+           </td>
+         </tr>
+         <tr>
+           <td style="text-align: center;padding: 20px 0px 40px 0px">
+             <img src="https://statics3.seeedstudio.com/assets/img/m/seeed_logo.png" style=" width: 180px;" />
+           </td>
+         </tr>
+       </table>
+     </td>
+    </tr>
+  </table>
+ </body>
+
+</html>
